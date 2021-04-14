@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "All about me",
+      "description": "Here's a little bit about me and what I like to do. ",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-04-13T20:08:49-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Jayde's site",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-04-13T20:08:50-04:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

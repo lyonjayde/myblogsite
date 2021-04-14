@@ -1,0 +1,9 @@
+---
+title: "All about me"
+description: |
+  Here's a little bit about me and what I like to do. 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
