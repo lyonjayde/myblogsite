@@ -1,24 +1,226 @@
 ---
-title: "My first new post"
+title: "My first R assignment"
 description: |
-  A short description of the post.
+ This is my first R assignment, looking at the election results and which members of Congress voted to impeach former President Donald J. Trump. 
 author:
   - name: Jayde Lyon
     url: https://www.google.com
-date: 04-13-2021
+date: 04-19-2021
 output:
   distill::distill_article:
     self_contained: false
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+
+#first we'll load our libraries
+library(tidyverse)
+library(lubridate)
+
+# run this to load the data for this assignment
+# it will create a dataframe called "impeach," with all House Democrats and election results/demographics
+# it indicates whether or not the member publicly called for the impeachment 
+# note: THIS IS FOR THE FIRST TRUMP IMPEACHMENT IN 2020, NOT THE SECOND IN 2021
+impeach <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRh8d5JaDqBtByzNw2JZF3idaACobDhhk-p7chJoktA0HawELHFOvjQOqCpzGA4MGONvPlR7GASqW-K/pub?gid=1765341510&single=true&output=csv")
+
+
 ```
 
-This is the first post I am trying for a Distill site.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+FOR EACH OF THE QUESTIONS BELOW IN EACH CODE CHUNK, WRITE YOUR WORKING R CODE 
+TO RETURN THE REQUESTED RESULTS
 
 ```{r}
-head(mtcars)
+# 1) The column "for_impeachment" indicates whether the member has publicly called for
+# an impeachment inquiry. Filter to return only the ones where the answer is NO.    
+
+impeach %>% 
+  filter(for_impeachment == 'NO')
+
+
+
 ```
+
+
+```{r}
+# 2) Filter to return only results where a member is both against impeachment, and comes from a 
+# district that President Trump won in 2016 (which is noted in the "p16winningparty" column)
+
+
+impeach %>% 
+  filter (for_impeachment == 'NO', p16winningparty == 'R')
+
+
+```
+
+
+```{r}
+# 3) Filter for only results where a member is against impeachment, comes from a 
+# district that President Trump won in 2016 (which is noted in the "p16winningparty" column),
+# and also comes from a district that Mitt Romney won in 2012 ("p12winningparty").
+
+impeach %>% 
+  filter (for_impeachment == 'NO', p16winningparty == 'R', p12winningparty == 'R')
+
+
+```
+
+
+```{r}
+# 4) Filter for only results from September 2019 where a member is a YES for impeachment. 
+
+impeach %>% 
+  filter(date_month == '9', date_year == '2019', for_impeachment == 'YES')
+
+
+
+```
+
+
+```{r}
+# 4) Filter for only results where a member is a YES for impeachment and is from a district
+# where Clinton won more than 70 percent of the vote in 2016 (found in column "clinton_percent")
+
+impeach %>% 
+  filter(clinton_percent >= '70.0', for_impeachment == 'YES')
+
+
+```
+
+
+```{r}
+# 5) Sort the entire dataframe based on the percentage of a district that has a 
+# bachelor's degree or higher ("pct_bachelors"), from lowest to highest
+
+
+impeach %>% 
+  arrange (pct_bachelors)
+
+
+```
+
+
+```{r}
+# 6) Sort the just those who are NO on impeachment based on the percentage of a district that has a 
+# bachelor's degree or higher ("pct_bachelors"), from lowest to highest
+
+impeach %>% 
+  filter(for_impeachment == 'NO') %>% 
+  arrange(pct_bachelors)
+
+
+
+```
+
+
+```{r}
+# 7) Sort the just those who are NO on impeachment based on the percentage of a district that has a 
+# bachelor's degree or higher ("pct_bachelors"), from lowest to highest.
+# Then filter those records by only those whose bachelor's percentage is below the national average (found
+# in the "pct_bachelors_compared_to_national" column).
+
+no_impeach <- impeach %>% 
+  filter(for_impeachment == 'NO') %>% 
+  arrange(pct_bachelors)
+
+no_impeach %>% 
+  filter(pct_bachelors_compared_to_national == 'BELOW')
+
+
+
+```
+
+
+```{r}
+# 8) Filter for only members from New Jersey who are NO on impeachment
+
+
+impeach %>% 
+  filter(for_impeachment == 'NO', state == 'NJ')
+
+
+```
+
+
+```{r}
+# 9) Filter for those who were YES on impeachment, with a declared date prior to 2019. So only
+# those with dates before 2019.  Then sort those so that the highest Clinton vote percentages are 
+# at the top.   
+
+impeach %>% 
+  filter (date_year < '2019', for_impeachment == 'YES') %>% 
+  arrange (desc(clinton_percent))
+
+
+```
+
+
+```{r}
+# 10) Answer this question using grouping.
+# How many members in the dataset who are holdouts on impeachment
+# come from districts with a GDP that is above the national figure? How many below?
+
+impeach %>% 
+  filter (for_impeachment == 'NO') %>% 
+  count(gdp_above_national)
+
+
+```
+
+
+```{r}
+# 11) Answer this question using grouping.
+# Similar to #10 above, now break down both those who favor impeachment AND who don't
+# and show which come from district above or below national GDP
+
+
+impeach %>% 
+  count (for_impeachment, gdp_above_national)
+
+
+
+```
+
+
+
+```{r}
+# 12) Answer this question using grouping.
+# Now do the same as #11, but this time instead of GDP look at above/below 
+# the national avg percent of college graduates (pct of pop with bachelor's degrees)
+
+
+impeach %>% 
+  count (for_impeachment, pct_bachelors_compared_to_national)
+
+
+```
+
+
+```{r}
+# 13) Answer this question using grouping.
+# Instead of showing the above/below national average counts for those for or 
+# against impeachment, this time show the combined MEAN/AVERAGE percentage of college
+# grads for all districts that are Yes for impeachment vs. No
+
+impeach %>% 
+  group_by(for_impeachment) %>% 
+  summarize(mean(pct_bachelors)) 
+
+
+
+```
+
+
+
+```{r}
+# 14) Answer this question using grouping.
+# Do the same as #13, but this time show the combined MEAN/AVERAGE percentage of 
+# the vote that Donald Trump received for all districts that are Yes for 
+# impeachment vs. No
+
+
+impeach %>% 
+  group_by(for_impeachment) %>% 
+  summarize(mean(trump_percent)) 
+
