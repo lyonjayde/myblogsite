@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Jayde's site</title>
+    <link>https://jaydelyon.netlify.app/</link>
+    <atom:link href="https://jaydelyon.netlify.app/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Jayde's site
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Moving along with R</title>
+      <dc:creator>Jayde Lyon</dc:creator>
+      <link>https://jaydelyon.netlify.app/posts/2021-04-20-moving-along-with-r</link>
+      <description>As I've progressed further with learning R and R Studio, I now am quite confident in my abilities.</description>
+      <category>R</category>
+      <category>Class work</category>
+      <guid>https://jaydelyon.netlify.app/posts/2021-04-20-moving-along-with-r</guid>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>My first R assignment</title>
+      <dc:creator>Jayde Lyon</dc:creator>
+      <link>https://jaydelyon.netlify.app/posts/2021-04-13-my-first-new-post</link>
+      <description>This is my first R assignment, looking at the election results and which members of Congress voted to impeach former President Donald J. Trump.</description>
+      <category>R</category>
+      <category>Class work</category>
+      <guid>https://jaydelyon.netlify.app/posts/2021-04-13-my-first-new-post</guid>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome to the site all about me - Jayde Lyon!</title>
+      <dc:creator>Jayde Lyon</dc:creator>
+      <link>https://jaydelyon.netlify.app/posts/welcome</link>
+      <description>Welcome to my new blog, all about me! Please stay tuned to find out how I'm doing in life, what job I'm at, and just all the fun I'm having post-grad! See you soon!</description>
+      <guid>https://jaydelyon.netlify.app/posts/welcome</guid>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
