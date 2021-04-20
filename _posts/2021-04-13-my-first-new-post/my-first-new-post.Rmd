@@ -9,6 +9,9 @@ date: 04-19-2021
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - R
+  - Class work
 ---
 
 ```{r setup, include=FALSE}
