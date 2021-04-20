@@ -10,6 +10,10 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: 'Social Media'
+      menu:
+        - text: 'Twitter'
+          href: https://twitter.com/lyonjayde  
 output: distill::distill_article
 collections:
   posts:
