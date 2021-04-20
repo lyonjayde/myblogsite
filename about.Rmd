@@ -1,7 +1,8 @@
 ---
 title: "All about me"
 description: |
-  Here's a little bit about me and what I like to do. 
+  I am a B.A. Candidate in International Affairs at The George Washington University, graduating May 2021. During my studies I have focused on international politics and Middle Eastern and Northern African affairs. I also hold a working profiency in Arabic. 
+  
 ---
 
 ```{r setup, include=FALSE}
