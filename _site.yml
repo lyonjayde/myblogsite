@@ -13,9 +13,9 @@ navbar:
     - text: 'Work Samples'
       herf:
     - text: 'Experience'
-      herf: experience.html 
+      href: experience.html
     - text: 'Skills'
-      herf:
+      href:
     - text: 'Social Media'
       menu:
         - text: 'Twitter'
