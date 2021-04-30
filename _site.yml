@@ -1,13 +1,11 @@
 name: "myblogsite"
-title: "Jayde's site"
+title: "Home"
 description: |
   Jayde's site
 output_dir: "_site"
 base_url: https://jaydelyon.netlify.app/
 navbar:
   right:
-    - text: "Home"
-      href: index.html
     - text: "About"
       href: about.html
     - text: 'Work Samples'
