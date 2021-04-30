@@ -10,10 +10,18 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: 'Work Samples'
+      herf:
+    - text: 'Experience'
+      herf:
+    - text: 'Skills'
+      herf:
     - text: 'Social Media'
       menu:
         - text: 'Twitter'
           href: https://twitter.com/lyonjayde  
+        - text: 'linkedin'
+          href: https://www.linkedin.com/in/jayde-lyon-53323517a/ 
 output: distill::distill_article
 collections:
   posts:
