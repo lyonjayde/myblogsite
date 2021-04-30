@@ -6,14 +6,28 @@
       "description": "I am a B.A. Candidate in International Affairs at The George Washington University, graduating May 2021. During my studies I have focused on international politics and Middle Eastern and Northern African affairs. I also hold a working profiency in Arabic. \n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-04-20T19:58:21-04:00"
+      "last_modified": "2021-04-29T22:04:31-04:00"
+    },
+    {
+      "path": "experience.html",
+      "title": "Work Experience",
+      "description": "My professional and educational experience over the years\n",
+      "author": [
+        {
+          "name": "Jayde Lyon",
+          "url": "www.google.com"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\n\n\n\n",
+      "last_modified": "2021-04-29T22:04:32-04:00"
     },
     {
       "path": "index.html",
       "title": "Jayde Lyon",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-04-20T19:58:22-04:00"
+      "last_modified": "2021-04-29T22:04:32-04:00"
     }
   ],
   "collections": ["posts/posts.json"]
