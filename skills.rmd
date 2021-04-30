@@ -1,0 +1,47 @@
+---
+title: "Skills"
+description: |
+  Various skills and specialized knowledge I have. 
+output: distill::distill_article
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### Systems 
+
+-   Adobe Spark
+
+-   Cvent
+
+-   Dedoose
+
+-   Google Earth Studio
+
+-   MailChimp
+
+-   Microsoft Office and Google Suite
+
+-   MyEmma
+
+-   SPSS
+
+-   R and R Studio
+
+### General 
+
+-   Communications
+
+-   Editorial Work
+
+-   Social Media
+
+### Languages 
+
+-   English
+
+-   Working Arabic proficiency
