@@ -1,12 +1,8 @@
 ---
 title: "Work Experience"
-description: |
-  My professional and educational experience over the years.
-author:
-  - name: Jayde Lyon 
-    url: www.google.com
-date: "`r Sys.Date()`"
 output: distill::distill_article
+categories:
+  - Resume
 editor_options: 
   markdown: 
     wrap: 72
@@ -16,7 +12,7 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## [**WORK / EXPERIENCE**]{.ul}
+## Work and Volunteer Experience
 
 #### [EXTERNAL RELATIONS AND COMMUNICATIONS INTERN - OECD WASHINGTON CENTER]{.smallcaps}
 
@@ -61,7 +57,7 @@ preparing orders while directing others. Evaluate guest satisfaction by
 investigating and resolving complaints in real time. Maintain composure
 at all times in a fast paced food service environment.
 
-## EDUCATION
+## Education
 
 #### [GEORGE WASHINGTON UNIVERSITY, ELLIOTT SCHOOL OF INTERNATIONAL AFFAIRS]{.smallcaps}
 
