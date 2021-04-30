@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://jaydelyon.netlify.app/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,26 +85,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Jayde's site: Jayde Lyon</title>
+  <title>Jayde's site: The Effect of Political Protest Music In Africa</title>
 
 
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2019-12-16"/>
+  <meta property="article:created" itemprop="dateCreated" content="2019-12-16"/>
+  <meta name="article:author" content="Jayde Lyon"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Jayde&#39;s site: Jayde Lyon"/>
+  <meta property="og:title" content="Jayde&#39;s site: The Effect of Political Protest Music In Africa"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Jayde&#39;s site"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Jayde&#39;s site: Jayde Lyon"/>
+  <meta property="twitter:title" content="Jayde&#39;s site: The Effect of Political Protest Music In Africa"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Jayde Lyon"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["The Effect of Political Protest Music In Africa"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jayde Lyon"]}]}]},{"type":"character","attributes":{},"value":["December 16, 2019"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["markdown"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["wrap"]}},"value":[{"type":"integer","attributes":{},"value":[72]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2045,12 +2048,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Jayde Lyon","authors":[]}
+{"title":"The Effect of Political Protest Music In Africa","authors":[{"author":"Jayde Lyon","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2019-12-16T00:00:00.000+00:00","citationText":"Lyon, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2099,233 +2102,60 @@ Social Media
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Jayde Lyon">Jayde Lyon</h1>
-<a href="posts/2021-04-20-moving-along-with-r/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Class work"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 20, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Moving along with R</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Class work</div>
-</div>
-<p>As I've progressed further with learning R and R Studio, I now am quite confident in my abilities.</p>
-</div>
-</a>
-<a href="posts/2021-04-13-my-first-new-post/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Class work"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 19, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>My first R assignment</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Class work</div>
-</div>
-<p>This is my first R assignment, looking at the election results and which members of Congress voted to impeach former President Donald J. Trump.</p>
-</div>
-</a>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">April 19, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to the site all about me - Jayde Lyon!</h2>
-<div class="dt-tags"></div>
-<p>Welcome to my new blog, all about me! Please stay tuned to find out how I'm doing in life, what job I'm at, and just all the fun I'm having post-grad! See you soon!</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:Class_work">Class work</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:R">R</a>
-<span class="category-count">(2)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Jayde Lyon</h1>
+<h1>The Effect of Political Protest Music In Africa</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
 </div>
 
+<div class="d-byline">
+  Jayde Lyon  
+  
+<br/>December 16, 2019
+</div>
 
 <div class="d-article">
+<p><strong>Introduction</strong></p>
+<p>African music is a staple tradition in society that spans the continent, with music being used as a tool of celebration, protection, and communication. Research on politically engaged music has been prominent since the 1960s, with notable findings such as the conclusion that ‘although political music has dwindled in Western countries, “in Africa it never went away.”’ A review of this literature reveals that an increase in political protest music is linked to a renowned feeling of hope that something could, and would, change in each group’s respective country. Examining the cultural significance of ‘protest political music’ in the context of the current crises in Mali and Nigeria reveals that the international community, along with the African diaspora, should put greater effort into promoting African civil society through music. Spreading and promoting the protest political music being created in these regions today would put pressure on the Malian and Nigerian governments to change their practices and would and allow for a deeper understanding of the ongoing crises.<br />
+</p>
+<p>In 2012, in Mali, the mujahideen of Movement for Oneness and Jihad in West Africa (MUJAO), Ansar Dine, and Al-Qaeda in the Islamic Maghreb (AQIM) implemented a music ban over the two-thirds of the country they then controlled in order to “impose their authority” and stifle the possibility of a civilian uprising. In present day, music in Mali has resurfaced and often is used to speak out against both politicians and Islamic extremists, though there are new terrorist organizations fighting for control over portions of Northern Mali every day. In Nigeria, the musician Femi Kuti encourages artists throughout Africa to speak out against the problems encountered in African nations across the continent, in an effort to encourage Africans to identify with and feel invested in Africa again. In his song “Africa for Africa,” Kuti sings, “As Africans we must care for Africa. Africa for Africa,” elaborating on the fact that he feels that people no longer care about Africa and that “[Africans] have to wait for the West to tell us what is going on in other parts of Africa.” These two cases illuminate the prominence of music in Africa and a constant battle that reflects the state of many African countries.</p>
+<p><strong>Music in Africa</strong></p>
+<p>African music, much like the continent, has been shaped by the tumultuous history from pre-colonial times to present-day. The base of most of African music stems from African drumming, which was used as a form of communication and storytelling by local griots. This led to the introduction of tassou, a traditional type of rhyming. African music today has evolved towards two pathways: Afrobeats, which combines traditional African music with jazz and R&amp;B; and African hip-hop, which is largely based on collaboration among artists. A central characteristic of African music is that people tend to represent themselves, their realities, and where they are from or their history, making way for music to act as a form of communication that is understood across borders.</p>
+<p>In recent history, specifically with respect to African hip-hop, there have been multiple instances where music and social change have gone hand-in-hand. Music allows the artist to create an identity that the public can connect to and rally behind. This often leads to governments worrying that the artists’ words and what they represent can spark revolution. Music has also played a prominent part in social justice protests such as those during the Arab Spring and Y’en a Marre, where artists teamed up with journalists in an attempt to spread their truth and change the current system of oppression.</p>
+<p><strong>Protest political music</strong></p>
+<p>Garhe Osiebe argues that within popular music in Africa there is a musical genre called ‘protest music’ that includes the three subgenres of ‘protest political music’, ‘unity political music’, and ‘terrestrial praise political music’. Osiebe says that ‘protest political music’ is “aimed at criticizing the state as constituted by the status quo, or at criticizing the idea of nationhood in society.” Osiebe notes that as there have been more ethnic, religious, and minority conflicts through the years there has been an influx of artists that have at least one form of political music on their albums. This literature shows that there is growing concern for the political state of Africa among artists, who have the most contact with the general public. However, there are still issues with governments limiting public access to radio, music, and media. For example, this month Nigerian lawmakers proposed legislation that would penalize people with high fines if they posted or shared information online that the government deems ‘fake’. While this may seem to be aimed more at journalists than at musicians, the law is drafted very broadly. If the government deems lyrics of a certain song to be incorrect or not in line with their political beliefs, the government could both ban the distribution of that song and fine the artist, as well as any of the artist’s followers who have also shared or distributed the song.<br />
+</p>
+<p>This example from Nigeria only hints at the fear of repercussions that many African musicians face from their home country’s government. Since 2015, many private radio and television stations in Burundi have been attacked, causing artists to lose their platforms and then speak out. According to a Human Rights Watch report, the humanitarian situation in Burundi over the past two years have been devastating, with executions, rapes, abductions, and intimidation of political opponents by the Burundi ruling party youth league, the Imbonerakure. The Burundi government has labeled artists as enemies of the state and many of these artists have begun to seek refuge in other countries - from neighboring Rwanda to the United Kingdom.</p>
+<p><strong>The Case of Mali</strong></p>
+<p>Mali is a multi-ethnic country consisting of over 12 ethnic groups, with a historical divide between the ‘North’ and ‘South’ and no cohesive national identity. Contemporary Mali’s history has been filled with violence, including the Tuareg rebellion and multiple terrorist organizations fighting for control in the North. In 2012, MUJAO, AQIM, and Ansar Dine gained control of the Northern territory and implemented a ban on music because they did “not want Satan’s music.” This ban was then justified by government officials who said music “has a corrupting influence… distracting [Muslims] from their real duties: to pray and praise Allah.” The ban unsettled the already fragile national identity within Malian society and shows how people in power have attempted to, and in some cases succeeded in restricting public access to music to further their own goals - whether it be stopping the spread of information they do not like or which threatens their power or, as is the case with extremist groups, unsettling society in order to gain support.</p>
+<p>Despite these music bans, Mali has found its sense of national identity again through this crisis in its music. Specifically, because of the trauma associated with the Tuareg rebellion and terrorism in the region, Malians began to share songs of what was happening to them. These songs began to attract international attention around 2014. By diaspora communities sharing these songs from their homes through the internet, the artists and victims of conflict were able to get their message out to the world. While this was only one factor in improving conditions in Mali (with the introduction of French troops to combat the Islamist extremists playing a key role), it nevertheless shows the importance of music as a vehicle allowing artists to tell their story, speak out against their oppressor, and mobilize support from the international community.</p>
+<p>Earlier this year, Al-Qaeda’s Group for Support of Islam and Muslims (JNIM) claimed responsibility for a series of attacks in Northern Mali. Since 2018, Mali has entered a new period of crisis consisting of attacks from both Islamist groups and the Malian army. While music alone may not be able to save countries in humanitarian crises, music can help these countries share their stories and garner international support, as Mali demonstrated in 2012-2014. Music in Mali was used as a venue of communication that allowed the international community to hear their cries.</p>
+<p><strong>The Case of Nigeria</strong></p>
+<p>Although Nigeria transitioned from military rule to civilian rule in 1999, state corruption remained. Under President Olusegun Obasanjo, Nigeria still faced a corrupt police force that “beg[ged] like street beggars,” and a population suffering from hunger and starvation. Government corruption and indifference drew many artists in Nigeria to political activism. One of these artists was rapper Oladapo Olaitan Olaonipekun, aka Dagrin, who says a “failing football culture, an un-employing, un-proactive government, and worsening financial conditions of the citizenry,” are the reasons that Nigeria is not in a better political and economic state. Recently in 2017, Nigerian artist Saeon Moruda brought fellow Nigerian artists YCee, Vector, Iceberg Slim, and Terry Impala together for a protest song called #Aii (Remix) which points out the flaws within the government, but also shows, through the accompanying music video, the everyday hardships in Nigeria, such as the resource curse and high levels of illiteracy.<br />
+</p>
+<p>Fela Anikulapo-Kuti (1938-97), a political activist and the ‘grandfather’ of Afrobeat, was a Nigerian artist active during the period of military rule who spent his career criticizing the military regimes and allowing the space for a discussion of their policies to begin. Music became Fela Kuti’s tool in his attempt to put pressure on the Nigerian government, causing the state to feel threatened by him “because his anti-state politics reached many people, and those who felt powerless could relate to his messages and analyses.” Throughout his career Fela encountered harassment, prosecution, and imprisonment while speaking out against the government. Unfortunately, Fela died only two years before Nigeria was able to reach a democracy. While there are many factors that led to Nigeria’s transition to democracy, it would be unwise to not believe that Fela did not play a part in putting pressure on the military regimes and garnering public support for a change.</p>
+<p>Currently in Nigeria there are three pressing concurrent conflicts: Fulani-related conflict, government and election insecurities, and Boko Haram. Most protest music is based on the political state of Nigeria, meaning that protest music most directly affects conflict that is election-related. Election-related conflict is on the rise due to the closeness of the February 2019 election and it includes “protests, riots, and clashes between groups,” of the All-Progressives Congress (APC) and the People’s Democratic Party (PDP). This causes a destabilization of the Nigerian government, that could be positive by inciting change or negative by allowing Boko Haram or Fulani-related conflicts to gain a footing.<br />
+</p>
+<p>The political and economic future of Nigeria is still very uncertain. However, music has allowed Nigerian citizens to have a voice in their crisis, giving them a platform to judge, criticize, and communicate. While this is still a dangerous thing to do, it has helped lead the country to democracy in the past. Music may not be a direct solution to the Fulani-related and Boko Haram crises in Nigeria, but it could indirectly help in both cases by putting pressure on the government to act and do more to protect its citizens. Political music’s influence could even help the government rehabilitate its reputation by nudging officials to dedicate a majority of their time and resources, more effectively, to crises other than the political, election-related ones.</p>
+<p><strong>Conclusion</strong></p>
+<p>Music has been used for expression, protest, and communications both domestically and internationally throughout history. In many parts of Africa, such as in Senegal and Burundi, music has been used to communicate the oppression that is occurring in the state. This use of music as communication has led to an influx of resistance through both the promotion of political education and collective action. Political music has also been met with violent reactions, showing both the power of the form and the dangers of speaking.</p>
+<p>Music, when used politically, has the ability to create movements and ‘force’ governments into corners, so to speak. While the promotion of political protest music alone will not bring an end to the multiple crises facing African peoples, promoting this form of music could begin a conversation. If the international community and the African diaspora were to enable Africans to speak out about their governments, they might be able to start to hold said governments accountable. This is not an end or the solution but merely a proven step to beginning to solve political crises in Africa.</p>
+<p><strong>Bibliography</strong></p>
+<p>“Aii (Remix) - Saeon Feat. Vector, Iceberg Slim, Terry Apala &amp; YCee.” SongLyrics.com, 2017. <a href="http://www.songlyrics.com/saeon-feat-vector-iceberg-slim-terry-apala-ycee/aii-remix-lyrics/" class="uri">http://www.songlyrics.com/saeon-feat-vector-iceberg-slim-terry-apala-ycee/aii-remix-lyrics/</a>.</p>
+<p>Dave, Nomi. “The Politics of Silence: Music, Violence and Protest in Guinea.” Ethnomusicology 58, no. 1 (2014): 1-29. Doi: 10.5406/ethnomusicology.58.1.0001.</p>
+<p>Denselow, Robin. “Mali Music Ban by Islamists ‘Crushing Culture to Impose Rule’.” The Guardian. Guardian News and Media, January 15, 2013 <a href="https://www.theguardian.com/music/2013/jan/15/mali-music-ban-islamists-crushing" class="uri">https://www.theguardian.com/music/2013/jan/15/mali-music-ban-islamists-crushing</a>.</p>
+<p>Dufka, Corinne, and Elise Keppler. “Mali.” Human Rights Watch. Accessed December 11, 2019 <a href="https://www.hrw.org/africa/mali#" class="uri">https://www.hrw.org/africa/mali#</a>.</p>
+<p>Eywa. “Burundi: Musicians Menaced, Silenced and Fleeing the Country.” Freemuse, September 28, 2015. <a href="https://freemuse.org/news/burundi-musicians-menaced-silenced-and-fleeing-the-country/" class="uri">https://freemuse.org/news/burundi-musicians-menaced-silenced-and-fleeing-the-country/</a>. “Nigerian Artist Femi Kuti Talks Politics and Music. (11:00-12:00 PM) (Interview) (Broadcast transcript) (Audio File).” Tell Me More. National Public Radio, April 27, 2011.</p>
+<p>Olaniyan, Tejumola. “The Cosmopolitan Nativist: Fela Anikulapo-Kuti and the Antinomies of Postcolonial Modernity.” Research in African Literatures 32, no. 2 (2001): 76-89. www.jstor.org/stable/3820905.</p>
+<p>Osiebe, Garhe. “The Opportunism of Political Music Culture in Democratic Nigeria.” Journal of African Cultural Studies 28, no. 1 (January 2, 2016): 13–27. <a href="http://www.tandfonline.com/doi/abs/10.1080/13696815.2015.1069177" class="uri">http://www.tandfonline.com/doi/abs/10.1080/13696815.2015.1069177</a>.</p>
+<p>Paquette, Danielle. “Nigeria’s ‘Fake News’ Bill Could Jail People for Lying on Social Media. Critics Call It Censorship.” The Washington Post. WP Company, November 25, 2019. <a href="https://www.washingtonpost.com/world/africa/nigerias-fake-news-bill-could-jail-people-for-lying-on-social-media-critics-call-it-censorship/2019/11/25/ccf33c54-0f81-11ea-a533-90a7becf7713_story.html" class="uri">https://www.washingtonpost.com/world/africa/nigerias-fake-news-bill-could-jail-people-for-lying-on-social-media-critics-call-it-censorship/2019/11/25/ccf33c54-0f81-11ea-a533-90a7becf7713_story.html</a>.</p>
+<p>Pavlik, Melissa. “Concurrent Crises in Nigeria.” ACLED Data, October 16, 2018. <a href="https://www.acleddata.com/2018/10/15/concurrent-crises/" class="uri">https://www.acleddata.com/2018/10/15/concurrent-crises/</a>.</p>
+<p>Potter, Samantha. “Contemporary Voices: St Andrews Journal of International Relations.” Contemporary Voices: St Andrews Journal of International Relations. School of International Relations, University of St Andrews, June 20, 2019. <a href="https://cvir.st-andrews.ac.uk/articles/1489/print/" class="uri">https://cvir.st-andrews.ac.uk/articles/1489/print/</a>.</p>
+<p>Robotham, Donald Keith, and Gerhard Kubik. “African Music.” Encyclopedia Britannica. Encyclopedia Britannica, Inc., April 8, 2016 <a href="https://www.britannica.com/art/African-music" class="uri">https://www.britannica.com/art/African-music</a>.</p>
+<p>Roth, Kenneth. “World Report 2019: Rights Trends in Burundi.” Human Rights Watch, January 17, 2019 <a href="https://www.hrw.org/world-report/2019/country-chapters/burundi" class="uri">https://www.hrw.org/world-report/2019/country-chapters/burundi</a>.</p>
+<p>Saleh-Hanna, Viviane. “FELA KUTI’S WAHALA MUSIC: POLITICAL RESISTANCE THROUGH SONG.” In Colonial Systems of Control: Criminal Justice in Nigeria, by SALEH-HANNA VIVIANE, Affor Chris, Agomoh Uju, Agozino Biko, Akporherhe Clever, Anagaba Sylvester Monday, Elechi O. Oko, Eribo Osa, Nagel Mechthild, Odibo Igho, Sudbury Julia, and Ume Chukwuma, 355-76. Ottawa: University of Ottawa Press, 2008. <a href="doi:10.2307/j.ctt1ckph37.23" class="uri">doi:10.2307/j.ctt1ckph37.23</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

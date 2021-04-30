@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://jaydelyon.netlify.app/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,26 +85,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Jayde's site: Jayde Lyon</title>
+  <title>Jayde's site: الارهاب في الساحل</title>
+
+  <meta property="description" itemprop="description" content="Below is a short article I wrote in arabic regarding terrorism in the Sahel."/>
 
 
-
+  <meta name="article:author" content="Jayde Lyon"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Jayde&#39;s site: Jayde Lyon"/>
+  <meta property="og:title" content="Jayde&#39;s site: الارهاب في الساحل"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Below is a short article I wrote in arabic regarding terrorism in the Sahel."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Jayde&#39;s site"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Jayde&#39;s site: Jayde Lyon"/>
+  <meta property="twitter:title" content="Jayde&#39;s site: الارهاب في الساحل"/>
+  <meta property="twitter:description" content="Below is a short article I wrote in arabic regarding terrorism in the Sahel."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Jayde Lyon"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output"]}},"value":[{"type":"character","attributes":{},"value":["الارهاب في الساحل"]},{"type":"character","attributes":{},"value":["Below is a short article I wrote in arabic regarding terrorism in the Sahel. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jayde Lyon"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2045,12 +2048,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Jayde Lyon","authors":[]}
+{"title":"الارهاب في الساحل","description":"Below is a short article I wrote in arabic regarding terrorism in the Sahel.","authors":[{"author":"Jayde Lyon","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2099,233 +2102,25 @@ Social Media
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Jayde Lyon">Jayde Lyon</h1>
-<a href="posts/2021-04-20-moving-along-with-r/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Class work"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 20, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Moving along with R</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Class work</div>
-</div>
-<p>As I've progressed further with learning R and R Studio, I now am quite confident in my abilities.</p>
-</div>
-</a>
-<a href="posts/2021-04-13-my-first-new-post/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Class work"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 19, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>My first R assignment</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Class work</div>
-</div>
-<p>This is my first R assignment, looking at the election results and which members of Congress voted to impeach former President Donald J. Trump.</p>
-</div>
-</a>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">April 19, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to the site all about me - Jayde Lyon!</h2>
-<div class="dt-tags"></div>
-<p>Welcome to my new blog, all about me! Please stay tuned to find out how I'm doing in life, what job I'm at, and just all the fun I'm having post-grad! See you soon!</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:Class_work">Class work</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:R">R</a>
-<span class="category-count">(2)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Jayde Lyon</h1>
+<h1>الارهاب في الساحل</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
+<p><p>Below is a short article I wrote in arabic regarding terrorism in the Sahel.</p></p>
+</div>
+
+<div class="d-byline">
+  Jayde Lyon  
+  
 
 </div>
 
-
 <div class="d-article">
+<p>على مدى السنوات العشر الماضية، كانت زيارة في العنف والإرهاب في جميع انحاء منطقة الساحل في افريقيا. وتشمل هذه المنطقة بلدان نيجيريا والنيجر وتشاد وبوركينو فاسو ومالي. وقد التقي هذه الحملات الإرهابية التي يقوم بها المتشددون وجماعات الإرهاب الإسلامي بالعديد من المساعدات الدولية وعمليات مكافحة الإرهاب. لكن معظم هذه العمليات كانت برئيسة دول غربية بدلا من الدول المجاورة في افريقيا والشرق الأوسط. سالت نفسي، ما هي اثار هده الجهود.</p>
+<p>وقد تمكن الارهابيون من استغلال الاختلافات العرقية بين المدنيين والسيطرة على المناطق التي لا تسيطر عليها الدولة سيطرة قوية. وقد أدى ذلك الى تحويل الملايين الى مهاجرين ولاجئين والاف القتلى. بادز الجماعتين ارهابيتين في المنطقة هما بوكو حرام والقاعدة في بلاد المغرب الإسلامي. قتلت بوكو حرام العديد من الأشخاص في هجمات مسلحة وتفجيرات وتفجيرات انتحارية. كما اختطفت بوكو حرام العديد من البنات في سن الدراسة وهددت التعليم في شمال نيجيريا. تنظيم القاعدة في بلاد المغرب الإسلامي مشابه جدا، وقد قام بعمليات قنبلة مستمرة جميع انحاء منطقة الساحل.</p>
+<p>ومع ذلك، فقد تبين ان العمليات العسكرية الدولية والحكومية تسببت في مقتل عدد من المدنيين اكبر من عدد الجماعات الإرهابية. وقد أدى ذلك أيضا الى سهولة تجنيد المنظمات الإرهابية، حيث تقتل الحكومة مدييها. وقتيل ان القوات الدولية في المنطقة ارتكبت انتهاكات لحقوق الانسان ضد المدنيين، بما في ذلك الاغتصاب والقتل خلال العمليات. ولا يمكن للمجتمعات المحلية ان تعتمد على المنظمات الإرهابية او القوات الدولية. هذا العام انضمت الامارات أخيرا الى عمليات مكافحة الإرهاب في منطقة الساحل الافريقي. وهم في معظمها لا يقدمون سوى الدعم الجوي ولكنهم يأملون في تحقيق الامن في المنطقة. كما ستجلب الرحلات مساعدات إنسانية ولقاحات من الطراز كوفيد ١٩.</p>
+<p>اعتفد انه من المهم جدا ان تشارك البلدان الإقليمية في افريقيا والشرق الأوسط في مكافحة الإرهاب في منطقة الساحل. الحدود في المنطقة باسرها مائه جدا العنف يمكن ان ينتقل بسهولة الى بلدان أخرى. يجب على الجميع ان يفعلوا ما هو افضل.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
