@@ -13,7 +13,7 @@ navbar:
     - text: 'Work Samples'
       herf:
     - text: 'Experience'
-      herf:
+      herf: experience.html 
     - text: 'Skills'
       herf:
     - text: 'Social Media'

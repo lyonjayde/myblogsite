@@ -1,23 +1,79 @@
 ---
 title: "Work Experience"
 description: |
-  My professional and educational experience over the years
+  My professional and educational experience over the years.
 author:
   - name: Jayde Lyon 
     url: www.google.com
 date: "`r Sys.Date()`"
 output: distill::distill_article
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
+## [**WORK / EXPERIENCE**]{.ul}
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+#### [EXTERNAL RELATIONS AND COMMUNICATIONS INTERN - OECD WASHINGTON CENTER]{.smallcaps}
 
+#### [Washington, DC 5/2020 -- 8/2020]{.smallcaps}
 
+Organized and hosted a webinar on the social and economic effects of
+COVID-19 on youth. Assisted the Organization for Economic Co-operation
+and Development (OECD) Washington's team with external communications
+and outreach to government agencies, business and labor groups, civil
+society, and the media. Increased the impact and influence of the OECD's
+work in North America through targeted public affairs and media
+activities. Took ownership and control of distributing mailings,
+tweeting updates, and producing webinars on topics of OECD focus.
 
+#### [U.S.-AFRICA BUSINESS CENTER INTERN - U.S. Chamber of Commerce]{.smallcaps}
 
+#### [Washington, DC 1/2020 -- 3/2020]{.smallcaps}
 
+Supported the Africa Business Center team with marketing, database
+management, event preparation and management, social media engagement,
+and related research. Researched relevant policy topics and helped
+develop regional strategies to further two-way trade and investment
+between the U.S. and Africa. Drafted policy briefs and attended member
+and congressional meetings on the state of business in Africa.
+Internship program ended early due to COVID-19
+
+#### [STUDENT TUTOR - GW SMARTDC]{.smallcaps}
+
+#### [Washington, DC 8/2019--Present]{.smallcaps}
+
+Provide reading support to elementary-age students in conjunction with
+GW SmartDC and DC Public Schools staff. Help students adapt to new
+concepts and foster their desire to read on a daily basis. Provide
+regular feedback to site coordinators and contribute to formal
+workshops. Recognized as an exceptional tutor. Host/Carryout Specialist
+RPM Italian DC -- Washington, DC 11/2019--Present Successfully direct
+the synchronization of restaurant dining with event function. Play an
+instrumental role in executing the customer's experience; ensuring
+customers, including VIPs, feel valued; and achieving customer
+satisfaction ratings. Act as team leader, efficiently and accurately
+preparing orders while directing others. Evaluate guest satisfaction by
+investigating and resolving complaints in real time. Maintain composure
+at all times in a fast paced food service environment.
+
+## EDUCATION
+
+#### [GEORGE WASHINGTON UNIVERSITY, ELLIOTT SCHOOL OF INTERNATIONAL AFFAIRS]{.smallcaps}
+
+#### [Bachelor of Arts, Major in International Affairs, Minor in Journalism and Mass Communication]{.smallcaps}
+
+#### [Expected Graduation 5/2021]{.smallcaps}
+
+[**Activities:**]{.ul} Dean's List, College Democrats, International
+Affairs Society, GW Hatchet, Black Student Union
+
+[**Classes:**]{.ul} Advanced Arabic, Conflict and Conflict Resolution,
+Digital Media, Ethnic and Religious Conflict in Africa, Human Rights and
+Ethics, Humanitarian Assistance and International Development Law,
+International Economics, International Law, Intro. to Intelligence,
+Research Methods, Statistics in Social Science
