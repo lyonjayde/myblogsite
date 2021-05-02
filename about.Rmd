@@ -1,10 +1,13 @@
 ---
-title: "All about me"
-description: |
-  I am a B.A. Candidate in International Affairs at The George Washington University, graduating May 2021. During my studies I have focused on international politics and Middle Eastern and Northern African affairs. I also hold a working profiency in Arabic. 
-  
+title: "About me"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+![](images/Screen%20Shot%202021-05-02%20at%2011.34.11%20AM.png){width="2in"}
+
+I am a recent George Washington University graduate with a B.A. in international affairs. During my time at GW I have focused on international politics and both Middle Eastern and Northern African affairs.
+
+During my free time I enjoy hiking, bingeing Netflix series, and social media.

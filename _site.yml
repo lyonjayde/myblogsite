@@ -14,7 +14,7 @@ navbar:
           href: protest_africa.html
         - text: 'Limiting Protests During COVID-19'
           href:
-        - text: 'The 1979 Iranian Revolution'
+        - text: 'Something with R'
           href:
         - text: 'GW Hatchet Articles'
           href: https://www.gwhatchet.com/author/jayde-lyon/
@@ -22,7 +22,7 @@ navbar:
           href:
         - text: 'Arabic Article'
           href: Arabic_article.html
-    - text: 'Experience'
+    - text: 'Resume'
       href: experience.html
     - text: 'Skills'
       href: skills.html

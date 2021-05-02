@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: 'Resume'
 output: distill::distill_article
 editor_options: 
   markdown: 
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Work and Volunteer Experience
 
-#### [EXTERNAL RELATIONS AND COMMUNICATIONS INTERN - OECD WASHINGTON CENTER]{.smallcaps}
+#### [**EXTERNAL RELATIONS AND COMMUNICATIONS INTERN - OECD WASHINGTON CENTER**]{.smallcaps}
 
 #### [Washington, DC 5/2020 -- 8/2020]{.smallcaps}
 
@@ -25,7 +25,7 @@ work in North America through targeted public affairs and media
 activities. Took ownership and control of distributing mailings,
 tweeting updates, and producing webinars on topics of OECD focus.
 
-#### [U.S.-AFRICA BUSINESS CENTER INTERN - U.S. Chamber of Commerce]{.smallcaps}
+#### [**U.S.-AFRICA BUSINESS CENTER INTERN - U.S. Chamber of Commerce**]{.smallcaps}
 
 #### [Washington, DC 1/2020 -- 3/2020]{.smallcaps}
 
@@ -37,7 +37,7 @@ between the U.S. and Africa. Drafted policy briefs and attended member
 and congressional meetings on the state of business in Africa.
 Internship program ended early due to COVID-19
 
-#### [STUDENT TUTOR - GW SMARTDC]{.smallcaps}
+#### [**STUDENT TUTOR - GW SMARTDC**]{.smallcaps}
 
 #### [Washington, DC 8/2019--Present]{.smallcaps}
 
@@ -55,9 +55,22 @@ preparing orders while directing others. Evaluate guest satisfaction by
 investigating and resolving complaints in real time. Maintain composure
 at all times in a fast paced food service environment.
 
+#### [**Host/Carryout Specialist - RPM Italian DC**]{.smallcaps}
+
+#### [Washington, DC 11/2019--Present]{.smallcaps}
+
+Successfully direct the synchronization of restaurant dining with event
+function. Play an
+instrumental role in executing the customer's experience; ensuring
+customers, including VIPs, feel valued; and achieving customer
+satisfaction ratings.  Act as team leader, efficiently and accurately
+preparing orders while directing others. Evaluate guest satisfaction by
+investigating and resolving complaints in real time. Maintain composure
+at all times in a fast paced food service environment.
+
 ## Education
 
-#### [GEORGE WASHINGTON UNIVERSITY, ELLIOTT SCHOOL OF INTERNATIONAL AFFAIRS]{.smallcaps}
+#### [**GEORGE WASHINGTON UNIVERSITY, ELLIOTT SCHOOL OF INTERNATIONAL AFFAIRS**]{.smallcaps}
 
 #### [Bachelor of Arts, Major in International Affairs, Minor in Journalism and Mass Communication]{.smallcaps}
 
