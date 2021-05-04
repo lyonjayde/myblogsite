@@ -14,8 +14,8 @@ navbar:
           href: protest_africa.html
         - text: 'Limiting Protests During COVID-19'
           href: covid_protests.html 
-        - text: 'Something with R'
-          href:
+        - text: 'Current R abilities'
+          href: posts/2021-04-20-moving-along-with-r/index.html
         - text: 'GW Hatchet Articles'
           href: https://www.gwhatchet.com/author/jayde-lyon/
         - text: 'Signed Column Example'
