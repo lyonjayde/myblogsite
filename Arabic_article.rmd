@@ -4,6 +4,7 @@ description: |
   Below is a short article I wrote in arabic regarding terrorism in the Sahel. 
 author:
   - name: Jayde Lyon
+date: '04/28/2021'
 output: distill::distill_article
 ---
 

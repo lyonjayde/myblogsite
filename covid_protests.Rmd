@@ -2,6 +2,8 @@
 title: "The Legal Authority of Limiting Protests During COVID-19"
 description: |
   This is a legal essay I wrote regarding the legal authority countries have to limit gatherings, and protests, during the outset of the coronavirus pandemic. This was written for my international law class at GW. 
+author:
+  - name: Jayde Lyon
 date: "04/05/2020"
 output: distill::distill_article
 editor_options: 
