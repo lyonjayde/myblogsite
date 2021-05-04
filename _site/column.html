@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://jaydelyon.netlify.app/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,26 +85,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Home: Jayde Lyon</title>
+  <title>Home: Signed Column</title>
+
+  <meta property="description" itemprop="description" content="This is a signed column I wrote for my editorial and persuasive writing class at GW, regarding Black Lives Matter."/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2020-12-07"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-12-07"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Home: Jayde Lyon"/>
+  <meta property="og:title" content="Home: Signed Column"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="This is a signed column I wrote for my editorial and persuasive writing class at GW, regarding Black Lives Matter."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Home"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Home: Jayde Lyon"/>
+  <meta property="twitter:title" content="Home: Signed Column"/>
+  <meta property="twitter:description" content="This is a signed column I wrote for my editorial and persuasive writing class at GW, regarding Black Lives Matter."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Jayde Lyon"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Signed Column"]},{"type":"character","attributes":{},"value":["This is a signed column I wrote for my editorial and persuasive writing class at GW, regarding Black Lives Matter.\n"]},{"type":"character","attributes":{},"value":["12/07/2020"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2045,12 +2050,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Jayde Lyon","authors":[]}
+{"title":"Signed Column","description":"This is a signed column I wrote for my editorial and persuasive writing class at GW, regarding Black Lives Matter.","authors":[],"publishedDate":"2020-12-07T00:00:00.000+00:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2098,233 +2103,26 @@ Social Media
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Jayde Lyon">Jayde Lyon</h1>
-<a href="posts/2021-04-20-moving-along-with-r/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Class work"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 20, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Moving along with R</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Class work</div>
-</div>
-<p>As I've progressed further with learning R and R Studio, I now am quite confident in my abilities.</p>
-</div>
-</a>
-<a href="posts/2021-04-13-my-first-new-post/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Class work"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 19, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>My first R assignment</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Class work</div>
-</div>
-<p>This is my first R assignment, looking at the election results and which members of Congress voted to impeach former President Donald J. Trump.</p>
-</div>
-</a>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">April 19, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jayde Lyon</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to the site all about me - Jayde Lyon!</h2>
-<div class="dt-tags"></div>
-<p>Welcome to my new blog, all about me! Please stay tuned to find out how I'm doing in life, what job I'm at, and just all the fun I'm having post-grad! See you soon!</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:Class_work">Class work</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:R">R</a>
-<span class="category-count">(2)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Jayde Lyon</h1>
+<h1>Signed Column</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>This is a signed column I wrote for my editorial and persuasive writing class at GW, regarding Black Lives Matter.</p></p>
 </div>
 
 
 <div class="d-article">
+<p>This summer the deaths of George Floyd, Breonna Taylor and Rayshard Brooks brought a fire to the Black Lives Matter movement that hadn’t been seen since the killing of Trayvon Martin in 2012 and Michael Brown Jr. in 2014. These killings also brought the rebuttal of “all lives matter.”</p>
+<p>Some may purposely say “all lives matter” to provoke conflict, and others may see it simply as an inclusive remark. But for most Black people across the nation, including myself, “all lives matter” is just reinforcing the fact that our lives don’t matter.</p>
+<p>In my most impressionable years, people who looked like me were getting killed across the nation, with no justice being served. I was 13 years old when I found out about the killing of Trayvon Martin. I was sitting in the living room wearing a hoodie, as most teenagers do, as a picture of a Black boy wearing a hoodie came on the news who died because someone said he looked suspicious. Trayvon’s life mattered, just as my life does.</p>
+<p>The reality is that saying “Black lives matter” is not saying that Black lives matter ‘more,’ it’s saying that all lives cannot matter until Black lives matter. With the recent realization of the extent of police brutality in this country; black men are 2.5 times more likely to be killed by police than white men and black women, 1.4 times more likely than white women. Of the 1,016 people police have killed in 2020 Black people have been 28 percent of those, despite being only 13 percent of the population.</p>
+<p>For many, like myself, in the Black community when we hear someone say “all lives matter,” we realize that it’s just taking away from the specific grievances at hand. We do agree that everyone’s life matters, but we are the marginalized group that is getting killed at a disproportionate rate right now. We aren’t saying to have cops kill more white people, or Asians, or Hispanics, we’re simply saying the killing of Black people in America needs to stop because our lives matter. We deserve the chance to graduate high school, to finish college, to sleep in our own beds, or to go get fast food in the middle of the night. Just because we have a darker skin tone doesn’t make us less of a person.</p>
+<p>In many ways, the use of “all lives matter” by the white community is a form of gaslighting. Gaslighting is a tactic in which a person or entity, in order to gain more power (or in this case, maintain their power), makes a victim question what they know to be true, often about themselves making it difficult for the victim to see the truth. Those who are advocating for Black lives matter have done their research, the statistics support the disproportionate level of police brutality, gentrification, of mass incarceration among others. We experience blatant and subtle racism on daily basis. This is our reality.</p>
+<p>When you were in elementary school and it was your birthday, were your friends not allowed to sing happy birthday to you because all birthdays matter? If your house on fire would you want the fire department to water the house next to you because all houses matter? If you were in the hospital because of COVID-19 would you want your doctor to visit you last because all illnesses matter and he had to put a bandaid on someone’s papercut?</p>
+<p>Instead of exploring the reasons why the Black Lives Matter movement is even necessary, many have a knee jerk reaction, crying “all lives matter.” These people miss the point that the majority of American experiences tend to highlight whiteness and cater to its safety. ‘White is right,’ was engraved in the founding documents of this country. The structural roots of white supremacy and lack of concern for people of color continue to this day.</p>
+<p>Black lives did not matter when they were inhumanely transported from Africa and dumped at sea. Black lives did not matter when hundreds were lynched at the hands of the KKK. Black lives did not matter when they were attacked by dogs as they peacefully protested. Black lives did not matter as they were buying skittles at a corner store. Black lives did not matter as they were choked for 8 minutes and 46 seconds. Black Lives still do not matter today.</p>
+<p>Reparations need to be had. The focus needs to be on the issues at hand. Because all lives can’t matter until Black lives matter. Until then, I will be standing proud, my black fist raised shouting Black Lives Matter for all to hear.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

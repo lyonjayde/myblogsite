@@ -1,0 +1,37 @@
+---
+title: "Signed Column"
+description: |
+ This is a signed column I wrote for my editorial and persuasive writing class at GW, regarding Black Lives Matter.
+date: "12/07/2020"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This summer the deaths of George Floyd, Breonna Taylor and Rayshard Brooks brought a fire to the Black Lives Matter movement that hadn’t been seen since the killing of Trayvon Martin in 2012 and Michael Brown Jr. in 2014. These killings also brought the rebuttal of “all lives matter.” 
+
+Some may purposely say “all lives matter” to provoke conflict, and others may see it simply as an inclusive remark. But for most Black people across the nation, including myself, “all lives matter” is just reinforcing the fact that our lives don’t matter. 
+
+In my most impressionable years, people who looked like me were getting killed across the nation, with no justice being served. I was 13 years old when I found out about the killing of Trayvon Martin. I was sitting in the living room wearing a hoodie, as most teenagers do, as a picture of a Black boy wearing a hoodie came on the news who died because someone said he looked suspicious. Trayvon’s life mattered, just as my life does. 
+
+The reality is that saying “Black lives matter” is not saying that Black lives matter ‘more,’ it’s saying that all lives cannot matter until Black lives matter. With the recent realization of the extent of police brutality in this country; black men are 2.5 times more likely to be killed by police than white men and black women, 1.4 times more likely than white women. Of the 1,016 people police have killed in 2020 Black people have been 28 percent of those, despite being only 13 percent of the population. 
+
+For many, like myself, in the Black community when we hear someone say “all lives matter,” we realize that it’s just taking away from the specific grievances at hand. We do agree that everyone’s life matters, but we are the marginalized group that is getting killed at a disproportionate rate right now. We aren’t saying to have cops kill more white people, or Asians, or Hispanics, we’re simply saying the killing of Black people in America needs to stop because our lives matter. We deserve the chance to graduate high school, to finish college, to sleep in our own beds, or to go get fast food in the middle of the night. Just because we have a darker skin tone doesn’t make us less of a person. 
+
+In many ways, the use of “all lives matter” by the white community is a form of gaslighting. Gaslighting is a tactic in which a person or entity, in order to gain more power (or in this case, maintain their power), makes a victim question what they know to be true, often about themselves making it difficult for the victim to see the truth. Those who are advocating for Black lives matter have done their research, the statistics support the disproportionate level of police brutality, gentrification, of mass incarceration among others. We experience blatant and subtle racism on daily basis. This is our reality. 
+
+When you were in elementary school and it was your birthday, were your friends not allowed to sing happy birthday to you because all birthdays matter? If your house on fire would you want the fire department to water the house next to you because all houses matter? If you were in the hospital because of COVID-19 would you want your doctor to visit you last because all illnesses matter and he had to put a bandaid on someone’s papercut? 
+
+Instead of exploring the reasons why the Black Lives Matter movement is even necessary, many have a knee jerk reaction, crying “all lives matter.” These people miss the point that the majority of American experiences tend to highlight whiteness and cater to its safety. ‘White is right,’ was engraved in the founding documents of this country. The structural roots of white supremacy and lack of concern for people of color continue to this day. 
+
+Black lives did not matter when they were inhumanely transported from Africa and dumped at sea. Black lives did not matter when hundreds were lynched at the hands of the KKK. Black lives did not matter when they were attacked by dogs as they peacefully protested. Black lives did not matter as they were buying skittles at a corner store. Black lives did not matter as they were choked for 8 minutes and 46 seconds. Black Lives still do not matter today. 
+
+Reparations need to be had. The focus needs to be on the issues at hand. Because all lives can’t matter until Black lives matter. Until then, I will be standing proud, my black fist raised shouting Black Lives Matter for all to hear. 
+
+
+
+
+
+

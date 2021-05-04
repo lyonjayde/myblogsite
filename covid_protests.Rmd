@@ -1,0 +1,105 @@
+---
+title: "The Legal Authority of Limiting Protests During COVID-19"
+description: |
+  This is a legal essay I wrote regarding the legal authority countries have to limit gatherings, and protests, during the outset of the coronavirus pandemic. This was written for my international law class at GW. 
+date: "04/05/2020"
+output: distill::distill_article
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The outbreak of COVID-19, a respiratory disease caused by a novel coronavirus, has caused worldwide uncertainty and worry.
+Much like the outbreaks of Ebola, Severe Acute Respiratory Syndrome (SARS), Middle East Respiratory Syndrome (MERS), Human Immunodeficiency Virus (HIV), and Influenza; COVID-19 has prompted varied State responses, as no one knows for sure how to tread in this uncharted territory.
+In an effort to slow the rate of infection and prevent healthcare systems from being overwhelmed State governments across the world have implemented mandatory social distancing orders, enforceable quarantines, and forced closures of non-essential businesses.
+These measures have raised questions about what is the appropriate balance between interests in public health and safety on the one hand and civil liberties on the other.
+This paper explores one aspect of this conflict, specifically the scope of states' legal authority to limit otherwise lawful demonstrations against the government using COVID-19 as a justification.
+
+To understand the full scope of a states legal authority to limit demonstrations against the government because of COVID-19, we must first understand the (1) existing global health protection law and (2) international protections for individual human rights such as the right to move and the right to peaceful assembly ("Universal Declaration of Human Rights").
+In this sense, there is a question as to what international global health framework exists, whether and to what extent it is enforceable, and how to find the balance between individual rights and protection of the health of the larger community.
+We must also consider how choices States are taking today to combat COVID-19 compare to the international legal framework that is provided.
+Additionally, where States have implemented harsher responses, there is cause to consider whether there is a legal justification for those responses and where those states may attempt to continue these restrictions once the outbreak has been contained or a vaccine has been found.
+This paper finds that States are within their legal authority to limit otherwise lawful demonstrations against the government by using COVID-19 as a justification, due to binding regulations implemented by the United Nations (UN) and the World Health Organization (WHO), the concept of the "right to health," and the idea that the right to health is the basis of humanity.
+
+The concept of a "right to health" is well-established and appears in statements of values numerous international bodies.
+Globally, the WHO is the primary intergovernmental body in the global health field, and the first to expressly underscore the importance of a right to health.
+The preamble to the Constitution of the WHO both defines 'health' and recognizes health as a right (World Health Organization).
+Article 12 of the UN International Covenant on Economic, Social and Cultural Rights (the ICESCR), drafted by the United Nations Economic and Social Council and adopted by most countries, recognizes the right to "the highest attainable standard of physical and mental health" ("International Covenant on Economic and Social Rights").
+Additionally, Article 12 states that governments are obligated to take necessary steps for the "prevention, treatment and control of epidemic, endemic, occupational and other diseases." The UN Economic and Social Council have also stated that:
+
+> The right to health is closely related to and dependent upon the realization of other human rights, as contained in the International Bill of Rights, including the rights to food, housing, work, education, human dignity, life, non-discrimination, equality, the prohibition against torture, privacy, access to information, the freedoms of association, assembly and movement.
+> These and other rights and freedoms address integral components of the right to health ("General Comment No. 14").
+
+This General Comment of the UN Economic and Social Council, the constitution of the WHO, and the ICESCR shows the importance with which the international community views public health.
+
+While the examples above guide the international community's morality regarding the question at hand, they have also provided the framework for legally binding documents.
+The WHO has elaborated on the ICESCR's concept of the right to the highest standard of health.
+According to a report released by the WHO and the Office of the United Nations High Commissioner for Human Rights, the right to health is an "inclusive right" that includes freedoms; entitlements, including "the right to prevention, treatment, and control of diseases;" non-discriminatory factors, and universal access to good quality health services ("Fact Sheet No. 31").
+The International Health Regulations (IHR), binding on all 194 WHO countries, provides nations with the autonomy to "prevent, protect against, control and provide a public health response to the international spread of disease in ways that are commensurate with and restricted to public health risks, and which avoid unnecessary interference with international traffic and trade" ("International Health Regulation" Foreword).
+The International Covenant on Civil and Political Rights (ICCPR), a legally binding international human rights law framework, requires that restrictions on rights for public health reasons be lawful, necessary, and proportionate much like what is put forth by the UN Economic and Social Council ("International Covenant on Civil and Political Rights").
+
+In recent history the international community has set in place multiple documents to establish protections for individual human rights - ones that could be threatened by the question at hand.
+The Universal Declaration of Human Rights (the Declaration) is the most influential document in the history of human rights and sets out the fundamental human rights that should be universally protected.
+Although the Declaration is not legally binding, it has formed the groundwork for multiple treaties and acts as moral guidance for the international community.
+Within the Declaration, Article 13 sets out the right to the freedom of movement within one's State borders and Article 20 provides guidance on the "right to freedom of peaceful assembly and association" ("Universal Declaration of Human Rights").
+The Siracusa Principles, adopted by the UN Economic and Social Council and UN Human Rights Committee, provides guidance on responses that restrict human rights for reasons of public health or national security.
+It states that any measures taken need to be limited in duration, specific, lawful, necessary and proportionate ("The Siracusa Principles..." Part I, B).
+Restrictions specifically on the freedom of movement may not be discriminatory.
+While documents like the Siracusa Principles and similar provisions within treaties grant states the ability to restrict individual rights for the greater good, they ensure that this power cannot be overused through their specific terminology.
+This distinction between if a state is overreaching its legal capacity or acting within the lines of what is written determines if a state has the legal authority to restrict certain actions.
+
+Accordingly, to fit within the limits of States' legal authority to curb individual liberties during public health emergencies, restrictions such as social distancing, quarantine, or bans on large gatherings must be necessary to achieve a legitimate objective, of limited duration, respectful to human dignity and subject to review, according to international human rights legal framework.
+These restrictions, however, raise human rights concerns regarding the restriction of movement, freedom of expression, and civil society organizations.
+In principle, quarantines, lockdowns, and travel bans are consistent with international rights norms.
+As noted above, states have the legal capacity through the ICCPR to restrict rights for reasons of public health or national emergency.
+This authority is also acknowledged in the UN Economic and Social Council's General Comment 14.
+However, broad quarantines of undetermined lengths do not always meet those requirements and are often discriminatory towards at-risk populations in application.
+Moreover, sweeping restrictions on movement can lead to restrictions on other individual liberties such as freedoms of assembly and expression and thus must be carefully scrutinized.
+For instance, quarantines and lockdowns prevent those who want to demonstrate against the government from doing so, as people are unable to freely move.
+
+\
+States' responses to the recent COVID-19 outbreak demonstrate how even strict, nationwide restrictions can be invoked in the interest of public health.
+In China, authorities quarantined close to 60 million people in a few days to limit transmission, though it was too late as many residents left the region before the restrictions went into effect (Richardson 2020).
+Authorities reportedly barricaded the doors of families who were suspected of being infected (Mozur 2020) and used drones to scold people who were outside without wearing a mask (Lindberg 2020).
+On the other hand, Italy imposed a lockdown with more protections for individual rights.
+The government eventually placed the entire country on lockdown with the ability to travel for essential work or health reasons, and those who disobeyed could be fined or jailed (Horowitz 2020).
+While these two examples show different ways quarantines/lockdowns could play out the core idea is the same: that both states are within their legal rights.
+The measures are necessary to achieve a larger goal, commensurate with the risk to human life, and directed at the population at large (not specific individuals or groups).
+While mandatory quarantines, lockdowns, and banning of large gatherings make it impossible to hold demonstrations against the government and could even result in fines, this is justifiable under existing international law on the basis of public health emergencies.
+
+The second human rights concern deals with freedom of expression and subsequently access to critical information.
+Article 19 of the Declaration requires governments to protect the right to freedom of expression, including to seek, receive and impart information of all kinds.
+While this might not seem to pertain to the question at hand, it does where governments need to provide accurate information regarding COVID-19.
+If a state behaves like China, withholding basic information ("China: Respect Rights in Coronavirus Response"), or Iran, repressing widespread anti-government protests without providing COVID-19 information ("Iran: No Justice For Bloody Crackdown"), citizens will fail to listen to the government later on and will be more apt to disobey quarantines and launch demonstrations, as shown in Iran.
+However, it is shown that during COVID-19 the number of groups that have stopped or postponed, anti-government demonstrations have increased as the idea of a collective action to stop the spread of the pandemic has taken importance (Haldevang 2020).
+The third human rights concern deals with the protection of civil society organizations, who often participate in demonstrations against governments or other institutions.
+According to Article 25 of the ICCPR, governments are required to protect the right to participate in public affairs.
+During these uncertain times, in some cases states have welcomed public participation in the development of strategies in order to dissuade people from demonstrating together.
+The Iranian government originally proposed sending over 100,000 militia members door-to-door to screen for COVID-19, until Iranians reacted online saying that this would actually increase the number of cases in Iran ("Iran to Use Phone Checks...").
+
+While the major issues of the question at hand have been addressed above, there does raise the questions of (1) 'what if' states attempt to extend the length, or target group, of these restrictions, and (2) is there going to be enforceable action taken against countries that have implemented harsher response.
+According to international public health law, government actions must be taken for the shortest period of time possible and may not become discriminatory.
+However, governments could attempt to push back against this notion as the world enters a "new" normal.
+For example, the Chinese government may find the quarantine of protesters in Hong Kong attractive and attempt to extend the quarantine until a new way to deal with protesters is found (Rose 2020).
+It could be argued that the Chinese government reopening the epicenter of the Hubei province but closing its international borders could be a way to continue the quarantine, to limit anti-government demonstrations.
+With the government's increased civilian monitoring and unsuccessful attempts to quash the anti-government protests in Hong Kong, this provides an opportunity to continue to distance Hong Kong from the rest of the world to squash the pro-democracy protests.
+This raises the question, however, of who decides when restrictions are no longer necessary, and who enforces that decision.
+
+Recently, there have been reports of states implementing policies that restrict human rights to extents that are not in line with international human rights law, often resulting in excessive deaths.
+Kenyan government implemented restrictive policies on movement, including a curfew.
+The curfew, requiring people to stay in their homes from dawn to dusk, has led to increased police violence injuring and killing dozens through beatings and gunfire (Max Bearak 2020).
+In an opposite response tactic, the Brazillian president has "rejected" the calls for implementing a national, or regional, quarantine stating that "We're all going to die one day" (Fearnow 2020).
+Though this differs from the example above, it is also a response that is not in line with international public health law that requires governments to mitigate the spread of epidemics.
+Like the question above, this raises an issue as to what actions will be able to be taken against these states, once a sense of normalcy has returned, and who is responsible for enforcing the actions.
+Within the ICCPR, States may make a written complaint against another state for not following the provisions of the treaty, but there is no harsh penalty for not following the provisions.
+This is one of the key sub-issues that may arise throughout the course of COVID-19 as since there is no harsh punishment for these harsher restrictions or lack thereof, states may not be inclined to follow international law guidelines.
+
+International human rights law guarantees everyone the right to health, while also allowing for governments to restrict other rights in order to protect the global public health.
+On March 11, 2020 the WHO declared COVID-19 had reached the level of a global pandemic.
+However, prior to this states began to enact quarantine, travel restrictions and lockdown measures in order to combat the spread of the disease in their own communities.
+While there is no evidence yet that states will attempt to continue any aspect of their lockdowns or quarantines, the possibility that this might happen is the only illegal part of the question at hand.
+Due to binding regulations implemented internationally through the WHO's International Health Regulations and the UN, specifically the ICCPR, states are within their legal rights to limit otherwise lawful demonstrations against the government by using COVID-19 as a justification.

@@ -13,13 +13,13 @@ navbar:
         - text: 'Political Protest Music in Africa'
           href: protest_africa.html
         - text: 'Limiting Protests During COVID-19'
-          href:
+          href: covid_protests.html 
         - text: 'Something with R'
           href:
         - text: 'GW Hatchet Articles'
           href: https://www.gwhatchet.com/author/jayde-lyon/
         - text: 'Signed Column Example'
-          href:
+          href: column.html 
         - text: 'Arabic Article'
           href: Arabic_article.html
     - text: 'Resume'
