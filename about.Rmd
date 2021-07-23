@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](images/Screen%20Shot%202021-05-02%20at%2011.34.11%20AM.png){width="2in"}
 
-I am a recent George Washington University graduate with a B.A. in international affairs. During my time at GW I have focused on international politics and both Middle Eastern and Northern African affairs.
+Jayde Lyon is a recent graduate of George Washington University, where she earned a Bachelor's in international affairs. During her studies, she focused on Middle Eastern and African studies. Jayde has also been a student tutor with Reading Partners, a national nonprofit that mobilizes communities to provide students with the proven, individualized reading support they need to read at grade level, for almost two years. She believes that reading is not only a fundamental part of academic excellence, but is also the building block for community growth. Jayde has recently became one of the founding members of the DC Reading Partners Young Professionals Board.
 
-During my free time I enjoy hiking, bingeing Netflix series, and social media.
+Jayde hopes to find herself working within the political world of Washington, DC in order to help inform Washington of the people of Africa and the Middle East. She hopes to pursue her Masters of J.D. degree in the future.
+
+During her free time, you can find Jayde blogging, hiking, doing yoga, or bingeing Netflix series!
